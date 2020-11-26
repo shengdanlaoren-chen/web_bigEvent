@@ -6,7 +6,7 @@ $(function() {
             // 删除localStorage 中的 token 值
             localStorage.removeItem('token');
             //跳转到login.html
-            location.href = 'login.html'
+            location.href = 'login.html';
             layer.close(index);
         });
     })
@@ -48,6 +48,6 @@ function renderAvatar(user) {
         $('.layui-nav-img').hide();
         var first = name[0].toUpperCase();
         // console.log(first);
-        $('.text-avater').text(first).show();
+        $('.text-avatar').text(first).show();
     }
 }

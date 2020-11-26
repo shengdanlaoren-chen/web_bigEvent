@@ -11,6 +11,7 @@ $.ajaxPrefilter(function(ajaxOpt) {
     }
     // 全局统一挂载 complete 回调函数
     ajaxOpt.complete = function(res) {
+        console.log(res);
         console.log(res.responseJSON);
         // 判断返回的数据是否在提醒我们 没有登录
         if (res.responseJSON.status == 1 && res.responseJSON.message == '身份认证失败！') {
@@ -23,7 +24,7 @@ $.ajaxPrefilter(function(ajaxOpt) {
                 // 清空token
                 localStorage.removeItem('token');
                 // 跳转到login.html页面
-                location.href = "/login.html"
+                location.href = "/login.html";
             });
 
 

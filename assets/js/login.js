@@ -59,8 +59,7 @@ $(function() {
 
                 // 将用户名 密码自动 填充到 登录表单中
                 let uname = $('.reg-box [name=username]').val();
-                $('.login-box[name=username]').val(uname);
-
+                $('.login-box [name=username]').val(uname);
                 let upwd = $('.reg-box [name=password]').val();
                 $('.login-box [name=password]').val(upwd);
                 // 清空注册表单
